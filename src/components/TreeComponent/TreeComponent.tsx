@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 // @ts-ignore
 import Tree from 'react-d3-tree';
 import './TreeComponent.css'
-
+// @ts-ignore
 const CustomNodeElement = ({ nodeDatum, toggleNode }) => {
   const handleClick = () => {
     if (nodeDatum.url) {
@@ -27,7 +27,9 @@ const TreeComponent = () => {
   useEffect(() => {
     const updateTreeDimensions = () => {
       if (treeContainerRef.current) {
+        // @ts-ignore
         const containerWidth = treeContainerRef.current.offsetWidth;
+        // @ts-ignore
         const containerHeight = treeContainerRef.current.offsetHeight;
 
         setTreeDimensions({
@@ -239,6 +241,7 @@ const TreeComponent = () => {
         translate={{ x: translateX, y: translateY }}
         separation={treeConfig.separation}
         nodeSize={treeConfig.nodeSize}
+        // @ts-ignore
         renderCustomNodeElement={(rd3tProps) => (
           <CustomNodeElement {...rd3tProps} />
         )}
