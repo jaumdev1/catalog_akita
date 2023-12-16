@@ -1,0 +1,12 @@
+.message{
+    width: 30dvw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.messageText{
+ padding: 15px;
+ text-align: justify;
+}
