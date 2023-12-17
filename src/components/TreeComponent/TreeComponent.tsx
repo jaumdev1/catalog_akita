@@ -11,12 +11,21 @@ const CustomNodeElement = ({ nodeDatum, toggleNode }) => {
   };
 
   return (
-    <g onClick={() => toggleNode && toggleNode(nodeDatum)}>
+    <g
+    tabIndex={0}
+    onClick={() => toggleNode && toggleNode(nodeDatum)}
+    onKeyPress={(event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        toggleNode && toggleNode(nodeDatum);
+      }
+    }}
+  >
+     <a href={nodeDatum.url} target="_blank" rel="noopener noreferrer">
       <circle r={15} fill={nodeDatum.children ? '#00008b' : '#87ceeb'} />
-      <text x="30" y="0" onClick={handleClick} style={{ cursor: 'pointer', color: "white", fill:"#111", stroke:"none" }}>
-        {nodeDatum.name}
-      </text>
-      
+      <text x="30" y="0" onClick={handleClick} style={{ cursor: 'pointer', color: "white", fill:"#111", stroke:"none" }} aria-label={nodeDatum.name}>
+  {nodeDatum.name}
+</text>
+</a>
     </g>
   );
 };

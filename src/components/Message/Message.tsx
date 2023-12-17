@@ -11,7 +11,7 @@ function Message() {
 Estou comprometido em manter a qualidade e relevância da catalogação. Se você encontrar algum vídeo que considera estar fora de contexto ou tema, ficarei grato se abrir uma issue no repositório correspondente. Estou pronto para revisar e corrigir quaisquer inconsistências para garantir que a experiência de todos seja a melhor possível.
 </p>
   
-  <a href='https://github.com/jaumdev1/catalog_akita' target='_blank'>repositório github</a>
+  <a href='https://github.com/jaumdev1/catalog_akita' target='_blank' aria-label="este link é do repositório do portal no github, você pode entrar e colaborar com o projeto."  >repositório github</a>
       </div>
 
     )
